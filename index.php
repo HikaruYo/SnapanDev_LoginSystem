@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -46,25 +47,27 @@
         ?>
 
         <!-- Input form -->
-        <div class="form-group">
-            <input type="username" class="username" name="username" placeholder="Username" required>
-        </div>
-        <br>
-        <div class="form-group">
-            <input type="password" class="password" name="password" placeholder="Password" required>
-        </div>
-        <br>
-        <button name="login" type="submit">Login</button>
-        <!-- Logout Function -->
-        <?php
+        <div class="form">        
+            <div class="form-group">
+                <input type="username" class="username" name="username" placeholder="Username" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="password" class="password" name="password" placeholder="Password" required>
+            </div>
+            <br>
+            <button name="login" type="submit">Login</button>
+            <!-- Logout Function -->
+            <?php
 
-            // Jika user masih memiliki session dan mencoba untuk mengakses index.php,
-            // Akan muncul tombol logout dan user dapat mengklik untuk mengakhiri session
-            if (isset($_SESSION['role'])) {
-                echo '<a href="logout.php">LogOut</a>';
-            };
+                // Jika user masih memiliki session dan mencoba untuk mengakses index.php,
+                // Akan muncul tombol logout dan user dapat mengklik untuk mengakhiri session
+                if (isset($_SESSION['role'])) {
+                    echo '<a href="logout.php">LogOut</a>';
+                };
 
-        ?>
+            ?>
+        </div>
     </form>
 </body>
 </html>
